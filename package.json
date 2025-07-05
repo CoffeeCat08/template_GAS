@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "rollup -c",
-    "deploy": "npm run build && cross-env GAS_SCRIPT_ID=$GAS_SCRIPT_ID clasp push --project $GAS_SCRIPT_ID"
+    "deploy": "npm run build && clasp push"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.27.4",
