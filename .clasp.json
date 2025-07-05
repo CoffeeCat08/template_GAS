@@ -1,6 +1,6 @@
 {
   "scriptId": "",
-  "rootDir": "../../../dist/gas/printList",
+  "rootDir": "../../../dist/gas/xxx",
   "scriptExtensions": [
     ".js",
     ".gs"
