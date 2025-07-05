@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "build": "rollup -c",
+    "deploy": "npm run build && cross-env GAS_SCRIPT_ID=$GAS_SCRIPT_ID clasp push --project $GAS_SCRIPT_ID"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-typescript": "^7.27.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@types/google-apps-script": "^1.0.99",
+    "dotenv": "^17.0.1",
+    "rollup": "^4.44.1"
+  }
+}
