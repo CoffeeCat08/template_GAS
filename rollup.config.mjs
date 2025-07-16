@@ -1,5 +1,7 @@
 import { babel } from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import dotenv from 'dotenv';
+dotenv.config(); // これで .env ファイルを読み込む
 
 const extensions = ['.ts', '.js'];
 
