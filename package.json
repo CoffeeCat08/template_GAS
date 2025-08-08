@@ -9,7 +9,6 @@
     "@babel/preset-typescript": "^7.27.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-node-resolve": "^16.0.1",
-    "@rollup/plugin-typescript": "^12.1.4",
     "@types/google-apps-script": "^1.0.99",
     "dotenv": "^17.0.1",
     "rollup": "^4.44.1",
