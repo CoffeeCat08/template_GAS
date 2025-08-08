@@ -1,8 +1,14 @@
 import { babel } from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import typescript from 'rollup-plugin-typescript2'; // ← 変更
 import dotenv from 'dotenv';
-dotenv.config(); // これで .env ファイルを読み込む
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const extensions = ['.ts', '.js'];
 
 const preventTreeShakingPlugin = () => {
@@ -10,7 +16,6 @@ const preventTreeShakingPlugin = () => {
     name: 'no-treeshaking',
     resolveId(id, importer) {
       if (!importer) {
-        // let's not treeshake entry points, as we're not exporting anything in Apps Script files
         return { id, moduleSideEffects: 'no-treeshake' };
       }
       return null;
@@ -28,7 +33,10 @@ export default {
     preventTreeShakingPlugin(),
     nodeResolve({
       extensions,
+      modulesOnly: false,
+      moduleDirectories: ['node_modules'], // これで十分
     }),
+    typescript({ tsconfig: './tsconfig.json', clean: true }),
     babel({ extensions, babelHelpers: 'runtime' }),
   ],
 };

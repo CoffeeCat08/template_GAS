@@ -1,14 +1,19 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "CommonJS",
+    "module": "ESNext",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src",
-    "types": ["google-apps-script"]
+    "rootDir": "..",
+    "types": ["google-apps-script"],
+    "baseUrl": ".",
+    "paths": {
+      "common/*": ["../common_typescript/*"]
+    }
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "../common_typescript/**/*.ts"],
+  "exclude": ["src/functions/**", "src/types/**"]
 }

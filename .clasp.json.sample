@@ -1,6 +1,6 @@
 {
   "scriptId": "",
-  "rootDir": "../../../dist/gas/xxx",
+  "rootDir": "../../dist/template_GAS",
   "scriptExtensions": [
     ".js",
     ".gs"

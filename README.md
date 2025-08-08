@@ -1,19 +1,5 @@
 # command shell
 
-## set to not track by 'git'. 
-
-  - [ ] .env
-
-    ```sh
-      git rm --cache .env
-    ```
-
-  - [ ] .clasp.json
-
-    ```sh
-      git rm --cache .clasp.json
-    ```
-
 ## Install
 
   Install Node Packages. Command this.

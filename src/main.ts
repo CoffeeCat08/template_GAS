@@ -1,7 +1,8 @@
-function helloGasProject(): string {
-  return 'Hello from GAS project using root TypeScript environment!';
-}
+// template_GAS/src/main.ts
+
+import { hello } from 'common/libs/helloworld';
 
 export function main() {
-  console.log(helloGasProject());
+  const msg = hello();
+  console.log(msg);
 }
